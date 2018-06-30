@@ -1,0 +1,28 @@
+{
+  "name": "babylonjs-experiment",
+  "version": "0.0.1",
+  "description": "",
+  "author": "VincentRoth",
+  "license": "MIT",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:VincentRoth/babylonjs-experiment.git"
+  },
+  "keywords": [
+    "babylonjs"
+  ],
+  "dependencies": {
+    "babylonjs": "^3.2.0",
+    "oimo": "^1.0.9"
+  },
+  "devDependencies": {
+    "express": "^4.16.3",
+    "open": "^0.0.5",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1"
+  }
+}
