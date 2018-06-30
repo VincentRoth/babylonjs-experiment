@@ -6,7 +6,7 @@ class App {
         this.engine = new BABYLON.Engine(this.canvas, true);
 
         this.map = new Map(this.engine);
-        this.user = new User(this, this.canvas);
+        this.initCamera(this.scene, this.canvas);
 
         this.engine.runRenderLoop(function () {
             this.map.scene.render();
@@ -17,6 +17,12 @@ class App {
                 this.engine.resize();
             }
         }.bind(this), false);
+    }
+
+    initCamera(scene, canvas) {
+        this.camera = new BABYLON.FreeCamera('camera', new BABYLON.Vector3(0, 5, -10), scene);
+        this.camera.setTarget(BABYLON.Vector3.Zero());
+        this.camera.attachControl(canvas, true);
     }
 
 }
